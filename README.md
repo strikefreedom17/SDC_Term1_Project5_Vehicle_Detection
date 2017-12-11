@@ -27,7 +27,7 @@ The goals / steps of this project are the following:
 
 #### 1. Explain how (and identify where in your code) you extracted HOG features from the training images.
 
-The HOG features extraction is described in "Step 2: Feature Extraction" section in "Main_Training.ipynb". Note that, all of related functions that use in this project are described in "lesson_funtions.py".
+The HOG features extraction is described in "Step 2: Feature Extraction" section in "Main_Training_Plus_Vehicle_Detection.ipynb". Note that, all of related functions that use in this project are described in "lesson_funtions.py".
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
@@ -67,7 +67,7 @@ Not Car
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-I trained a linear SVM using "svc.fit(X_train, y_train)". The test data is splitted with 20% of total data size. X stands for features which described above, including spatial bin, histrogram, and hog features. After training, the accuracy validated from test data set is 98.85%. And the SVC prediction given 10 images are all correct. Then, the model is saved as model1.pkl.
+I trained a linear SVM using "svc.fit(X_train, y_train)". The test data is splitted with 20% of total data size. X stands for features which described above, including spatial bin, histrogram, and hog features. After training, the accuracy validated from test data set is 98.79%. And the SVC prediction given 10 images are all correct. Then, the model is saved as model1.pkl.
 
 ### Sliding Window Search
 
