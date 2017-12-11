@@ -27,7 +27,7 @@ The goals / steps of this project are the following:
 
 #### 1. Explain how (and identify where in your code) you extracted HOG features from the training images.
 
-The HOG features extraction is described in "Step 2: Feature Extraction" section in "main_Model_Training.ipynb". 
+The HOG features extraction is described in "Step 2: Feature Extraction" section in "Main_Training.ipynb". 
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
@@ -35,14 +35,35 @@ I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an 
 
 My features extraction include histrogram feature, spatial bin feature, and hog feature. After several trials and errors, my parameters are listed as follow:
 
-colorspace = ''
+colorspace = 'YCrCb'
 
+use_spatial = 1
 
-![alt text][image2]
+spatial_size = (32,32)
+
+use_hist = 1
+
+hist_bins = 32
+
+use_hog = 1
+
+orient = 9
+
+pix_per_cell = 8
+
+cell_per_block = 2
+
+hog_channel = "ALL" # Can be 0, 1, 2, or "ALL"
 
 #### 2. Explain how you settled on your final choice of HOG parameters.
 
-I tried various combinations of parameters and...
+I tried several combination starting from colorspace i.e. RGB vs YUV vs YCrCb. For each colorspace selection I picked, I calculate the accuracy of model fitting and determine which colorspace can yield the best accuracy result. Likewise for the tuning of hist_bins, spatial_size, hist_bins, orient, pix_per_cell, cell_per_block, and hog_channel, I applied the same methodology. Here is the HOG features using RGB and YCrCb colorspace given the car and noncar image:
+
+Car
+![alt text][image2]
+
+Not Car
+![alt text][image3]
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
