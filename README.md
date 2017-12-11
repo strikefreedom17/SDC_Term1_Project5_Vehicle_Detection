@@ -99,4 +99,4 @@ I found that applying the heatmap to smooth out the false detection is not enoug
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-I spent a lots of time on training the model to get the acceptable accuracy and tuning the heat map + sliding window parameters + averaging frame parameter as well. So far, there is still some small amount of false positivies. Applying some useful technique such as kalman filter, particle filter to smooth out the false positive should be something useful if it's introduced in the lesson. 
+I spent a lots of time on training the model to get the acceptable accuracy and tuning the heat map + sliding window parameters + averaging frame parameter as well. So far, there is still some small amount of false positivies. Applying some useful technique such as kalman filter, particle filter to smooth out the false positive should be something useful. 
